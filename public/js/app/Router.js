@@ -1,6 +1,7 @@
 Chat.Router.map(function() {
-    this.resource('chat', {path:"/"});
-    this.resource('register', {path: "/register"});
+    this.resource('chat', { path:"/" });
+    this.resource('register', {path: "/register" });
+    this.resource('login', { path: "/login" })
 });
 
 Chat.ChatRoute = Ember.Route.extend({
