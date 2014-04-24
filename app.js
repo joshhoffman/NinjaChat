@@ -17,6 +17,19 @@ configRoutes.configRoutes(app);
 
 mongoose.connect('mongodb://localhost/ninjachat');
 
-http.createServer(app).listen(app.get('port'), function(){
+/*http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
+});*/
+
+var port = app.listen(app.get('port'));
+
+var io = require('socket.io').listen(port, function() {
+    console.log('Express server listening on port ' + app.get('port'));
+});
+
+io.sockets.on('connection', function (socket) {
+    socket.emit('message', { message: 'welcome to the chat' });
+    socket.on('send', function (data) {
+        io.sockets.emit('message', data);
+    });
 });

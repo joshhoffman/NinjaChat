@@ -20,7 +20,8 @@
         "connect-flash": "0.1.x",
         "coffee-script": "1.7.x",
         "connect-ensure-login": "*",
-        "password-hash": "*"
+        "password-hash": "*",
+        "socket.io": "latest"
     },
     "devDependencies": {
         "mocha": "~1.18.x",
