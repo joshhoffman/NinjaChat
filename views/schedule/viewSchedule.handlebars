@@ -1,0 +1,59 @@
+<div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="col-xs-11">
+                <h3>Schedule</h3>
+            </div>
+            <div class="row list-group">
+                <div class="col-xs-11 list-group-item">
+                    <div class="eventInputControl">
+                        <input type="text" id="scheduleName" name="scheduleName" class="pull-left form-control eventNameInput" placeholder="Schedule Name">
+                        <div class="badge pull-right badge-item eventAddButton">
+                            <button class="btn btn-xs" id="addScheduleEvent">+</button>
+                        </div>
+                    </div>
+                </div>
+                {{#each user.schedule}}
+                    <div class="col-xs-11 list-group-item">
+                        <span class="badge pull-right badge-default schedule-item-{{@index}}">x</span>
+                        <p><h4>{{this.event}}</h4>
+                        {{#if this.category}}
+                            {{#each this.category}}
+                                <span class="label label-warning">{{this}}</span>
+                            {{/each}}
+                        {{/if}}
+                        <span class="label label-primary">+</span>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row list-group">
+                <div class="col-xs-11">
+                    <h3>Reminders</h3>
+                </div>
+                <div class="col-xs-11 list-group-item">
+                    <div class="eventInputControl">
+                        <input type="text" id="reminderName" name="reminderName" class="pull-left form-control eventNameInput" placeholder="Schedule Name">
+                        <div class="badge pull-right badge-item eventAddButton">
+                            <button class="btn btn-xs" id="addReminderEvent">+</button>
+                        </div>
+                    </div>
+                </div>
+                {{#each user.reminders}}
+                    <div class="col-xs-11 list-group-item">
+                        <span class="badge pull-right badge-default schedule-item-{{@index}}">x</span>
+                        <p><h4>{{this.event}}</h4>
+                        {{#if this.category}}
+                            {{#each this.category}}
+                                <span class="label label-warning">{{this}}</span>
+                            {{/each}}
+                        {{/if}}
+                        <span class="label label-primary">+</span>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/viewSchedule.js"></script>
