@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c008fd13-8231-488e-a548-321d1150b421" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app/Router.js" afterPath="$PROJECT_DIR$/public/js/app/Router.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.html" afterPath="$PROJECT_DIR$/views/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -52,8 +51,8 @@
           <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/views/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.73719674" vertical-offset="848" max-vertical-offset="1980">
-                  <caret line="93" column="40" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
+                <state vertical-scroll-proportion="0.8490566" vertical-offset="0" max-vertical-offset="1980">
+                  <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
                   <folding />
                 </state>
               </provider>
@@ -548,7 +547,11 @@
       <created>1398301763583</created>
       <updated>1398301763583</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Huh. Login and register are working">
+      <created>1398302414936</created>
+      <updated>1398302414936</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -613,7 +616,8 @@
     <MESSAGE value="Got that caching working for index" />
     <MESSAGE value="Ember is working on index. Doesn't do anything yet" />
     <MESSAGE value="Cleaning up Ember" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaning up Ember" />
+    <MESSAGE value="Huh. Login and register are working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Huh. Login and register are working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -771,8 +775,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73719674" vertical-offset="848" max-vertical-offset="1980">
-          <caret line="93" column="40" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.8490566" vertical-offset="0" max-vertical-offset="1980">
+          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
           <folding />
         </state>
       </provider>
