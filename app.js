@@ -9,6 +9,8 @@ var mongoose = require('mongoose');
 var config = require('./lib/config/configure');
 var configRoutes = require('./lib/config/configureRoutes');
 
+var chatSocket = require('./Chat/ChatSocket');
+
 var app = express();
 
 // all environments
@@ -26,6 +28,8 @@ var port = app.listen(app.get('port'));
 var io = require('socket.io').listen(port, function() {
     console.log('Express server listening on port ' + app.get('port'));
 });
+
+chatSocket.setIO(io);
 
 io.sockets.on('connection', function (socket) {
     socket.emit('message', { message: 'welcome to the chat' });
