@@ -21,6 +21,7 @@
     {{#link-to "login"}}
     login
     {{/link-to}}
+    {{user}}
 </script>
 
 <script type="text/x-handlebars" id="register" data-template-name="register">
@@ -34,6 +35,9 @@
                     <h1 class="text-center">{{heading}}</h1>
                 </div>
                 <div class="modal-body">
+                    {{#if loginFailed}}
+                        <div class="alert">Invalid username or password.</div>
+                    {{/if}}
                     <form class="form col-md-12 center-block" id="registerForm" action="/register" method="post">
                         <div class="form-group">
                             <input type="text" id="username" name="username" class="form-control input-lg" placeholder="Email" autofocus>
@@ -76,9 +80,12 @@
                     <h1 class="text-center">{{heading}}</h1>
                 </div>
                 <div class="modal-body">
+                    {{#if loginFailed}}
+                        <div class="alert">Invalid username or password.</div>
+                    {{/if}}
                     <form class="form col-md-12 center-block" id="loginForm" action="/login" method="post">
                         <div class="form-group">
-                            <input type="text" id="username" name="username" class="form-control input-lg" placeholder="Email" required autofocus="">
+                            <input type="text" id="username" name="username" class="form-control input-lg" placeholder="Email" required autofocus>
                         </div>
                         <div class="form-group">
                             <input type="password" id="password" name="password" class="form-control input-lg" placeholder="Password" required>

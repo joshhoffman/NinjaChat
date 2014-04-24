@@ -23,7 +23,7 @@ exports.loginPost = function(req, res, next) {
                 return next(err);
             }
             console.log('about to redirect');
-            return res.redirect('/users');
+            return next(null, user);
         });
     })(req, res, next);
 };
