@@ -15,7 +15,7 @@ var app = express();
 config.config(app);
 configRoutes.configRoutes(app);
 
-mongoose.connect('mongodb://localhost/dogendar');
+mongoose.connect('mongodb://localhost/ninjachat');
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
