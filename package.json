@@ -1,9 +1,9 @@
 {
-  "name": "application-name",
+  "name": "OneFF",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app_stub.js"
+    "start": "node app.js"
   },
   "engines": {
     "node": "0.10.x",
@@ -22,13 +22,13 @@
     "connect-ensure-login": "*",
     "password-hash": "*",
     "socket.io": "latest",
-    "static-favicon": "~1.0.2",
-    "morgan": "~1.0.0",
-    "cookie-parser": "~1.0.1",
-    "express-session": "~1.0.3",
-    "express-json": "~0.1.0",
-    "method-override": "~1.0.0",
-    "errorhandler": "~1.0.0"
+    "static-favicon": "1.0.x",
+    "morgan": "1.0.x,
+    "cookie-parser": "1.0.x,
+    "express-session": "1.0.x,
+    "express-json": "0.1.x,
+    "method-override": "1.0.x,
+    "errorhandler": "1.0.x
   },
   "devDependencies": {
     "mocha": "~1.18.x",
