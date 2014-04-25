@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
     <title>One/ff</title>
-    <link rel='stylesheet' href='stylesheets/bootstrap.min.css'>
+    <!--<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="stylesheets/bootstrap.css">
     <!--<link rel="stylesheet" href="stylesheets/style.css">-->
 
 </head>
 <body>
 
-<script type="text/x-handlebars" id="application" data-template-name="chat">
-    Yeaaa
+<script type="text/x-handlebars" id="application" data-template-name="application">
+    <!-- TODO: Template will go in here I'm guessing -->
+    {{#link-to "index"}}Yeaaa{{/link-to}}
     {{#link-to "register"}}
     Register
     {{/link-to}}
@@ -21,6 +23,56 @@
     login
     {{/link-to}}
     {{user}}
+    {{outlet}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="index">
+    {{ chat-box messages=model action="sendMessage" }}
+</script>
+
+<script type="text/x-handlebars" data-template-name="components/chat-box">
+    <div class="row">
+        <div class="chat-component span3">
+            <ul class="convo">
+                {{#each message in messages}}
+                <li class="text">{{chat-message username=message.firstName message=message.text time=message.timeStamp}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+        <form class="new-message" {{action submit on="submit"}} >
+        {{input type="text" placeholder="Send new message" value=message class="text-field"}}
+        {{input type="submit" class="send-btn" value="Send"}}
+        </form>
+    </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="components/chat-message">
+    <div class="message media">
+        <div class="name-tag">
+            {{username}}
+        </div>
+        <div class="bd">
+            {{user-message message=message}}
+            {{time-stamp time=time}}
+        </div>
+    </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="components/user-avatar">
+    <img {{bind-attr src=avatarUrl alt=username}} class="avatar">
+</script>
+
+<script type="text/x-handlebars" data-template-name="components/user-message">
+    <div class="user-message">{{message}}</div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="components/time-stamp">
+    <div class="time-stamp">
+        <span class="clock" role="presentation"></span>
+        <span class="time">{{format-date time}}</span>
+    </div>
 </script>
 
 <script type="text/x-handlebars" id="register" data-template-name="register">
@@ -28,7 +80,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    {{#link-to "chat"}}
+                    {{#link-to "index"}}
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     {{/link-to}}
                     <h1 class="text-center">{{heading}}</h1>
@@ -58,7 +110,7 @@
                 </div>
                 <div class="modal-footer">
                     <div class="col-md-12">
-                        {{#link-to "chat"}}
+                        {{#link-to "index"}}
                             <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
                         {{/link-to}}
                     </div>
@@ -73,7 +125,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    {{#link-to "chat"}}
+                    {{#link-to "index"}}
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     {{/link-to}}
                     <h1 class="text-center">{{heading}}</h1>
@@ -97,7 +149,7 @@
                 </div>
                 <div class="modal-footer">
                     <div class="col-md-12">
-                        {{#link-to "chat"}}
+                        {{#link-to "index"}}
                             <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
                         {{/link-to}}
                     </div>
@@ -112,14 +164,16 @@
 
 <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="http://momentjs.com/downloads/moment.min.js"></script>
 <script src="/lib/bootstrap/bootstrap.js"></script>
 <script src="/lib/Ember/handlebars-v1.3.0.js"></script>
 <script src="/lib/Ember/ember.js"></script>
 <script src="/lib/Ember/ember-data.js"></script>
 <script src="js/app/app.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/app/router.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/app/user.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/app/chat.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/app/models.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/app/components.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/app/helpers.js" type="text/javascript" charset="utf-8"></script>
 <script src="/js/validate.js"></script>
 </body>
 </html>
