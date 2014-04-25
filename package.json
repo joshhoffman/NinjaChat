@@ -10,7 +10,7 @@
         "npm": "1.3.x"
     },
     "dependencies": {
-        "express": "3.5.x",
+        "express": "4.x.x",
         "less-middleware": "*",
         "handlebars": "*",
         "express3-handlebars": "*",
