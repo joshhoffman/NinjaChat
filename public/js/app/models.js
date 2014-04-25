@@ -8,4 +8,8 @@ App.Message = Ember.Object.extend({
     lastName: 'hoffman',
     text: null,
     timeStamp: null
-})
+});
+
+App.User = Ember.Object.extend({
+    // TODO: Create user model
+});

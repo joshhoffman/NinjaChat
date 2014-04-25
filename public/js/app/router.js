@@ -10,6 +10,11 @@ App.Router.map(function() {
 
 App.IndexRoute = Ember.Route.extend({
     // TODO: socket.io should be involved here somewhere
+    activate: function() {
+        // TODO: init socket.io here
+        console.log('test');
+    },
+    
     model: function() {
         return [
             {
