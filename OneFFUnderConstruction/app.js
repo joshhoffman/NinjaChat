@@ -9,6 +9,7 @@ var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 var engines = require('consolidate');
+var favicon = require('static-favicon');
 
 var app = express();
 
@@ -23,18 +24,15 @@ app.set('views', path.join(__dirname, 'views'));
        return str;
    };
 });*/
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(express.methodOverride());
-app.use(app.router);
+app.use(favicon());
+//app.use(express.urlencoded());
+//app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
-if ('development' == app.get('env')) {
+/*if ('development' == app.get('env')) {
   app.use(express.errorHandler());
-}
+}*/
 
 //app.get('/', routes.index);
 app.get('/', function(req, res) {

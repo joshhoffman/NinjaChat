@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "express": "4.x.x",
-    "consolidate": "~0.10.0"
+    "consolidate": "~0.10.0",
+    "static-favicon": "~1.0.2"
   }
 }
