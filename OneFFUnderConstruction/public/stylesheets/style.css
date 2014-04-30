@@ -12,7 +12,7 @@
     background: black;
     color: white;
     margin-left: 0;
-    font-family:"Courier";
+    font-family:"Lucida Console";
     font-weight:bold;
 }
 .Oh {
@@ -22,7 +22,6 @@
     background: black;
     color: white;
 }
-
 .neff {
     margin-left:13px;
     padding-top:12px;
