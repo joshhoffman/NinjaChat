@@ -7,6 +7,14 @@
 }
 .covered {
     position: relative;
+    font-size: 150%;
+    display: inline-block;
+    background: black;
+    color: white;
+    margin-left: 0;
+}
+.Oh {
+    position: relative;
     font-size: 300%;
     display: inline-block;
     background: black;
