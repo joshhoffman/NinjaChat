@@ -12,6 +12,8 @@
     background: black;
     color: white;
     margin-left: 0;
+    font-family:"Courier";
+    font-weight:bold;
 }
 .Oh {
     position: relative;
@@ -19,4 +21,9 @@
     display: inline-block;
     background: black;
     color: white;
+}
+
+.neff {
+    margin-left:13px;
+    padding-top:12px;
 }
